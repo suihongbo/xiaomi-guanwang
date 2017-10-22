@@ -1,5 +1,5 @@
 body{
-    height: 2000px;
+    height: 9999px;
 }
 /*轮播图开始*/
 .slide-box{
@@ -159,7 +159,7 @@ body{
 .home-sub{
     margin-top: 14px;
     margin-bottom: 26px;
-    overflow: hidden;
+    height: 170px;
 }
 .span4{
     position: relative;
@@ -230,15 +230,245 @@ body{
 
 /*明星单品开始*/
 .star-box{
-    height: 58px;
+    height: 438px;
+    position: relative;
+
 }
 .star-title{
     font-size: 22px;
     font-weight: 200;
     line-height: 58px;
-    background: #0f0;
+    color: #333;
 }
 .more-box{
+    position: absolute;
+    top: 20px;
+    right: 0;
+}
+.icon-star{
+    padding: 2px 8px;
+    border: 1px solid #e0e0e0;
+    color: #e0e0e0;
+    font-size: 17px;
     float: left;
+    cursor: pointer;
+}
+.icon-star-more{
+    border-left: 0;
+    color: #000;
+}
+.icon-star-more:hover{
+    color: #ff6700;
+}
+.pro-list{
+    height: 340px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+.pro-group{
+    height: 340px;
+    width: 2480px;
+}
+.pro-item{
+    width: 234px;
+    height: 300px;
+    background: #fafafa;
+    padding-top: 39px;
+    float: left;
+    margin-right: 14px;
+}
+.pro-item.pro-item-five{
+    margin-right: 0;
+}
+.pro-item.pro-item-six{
+    margin-left: 14px;
+}
+.color-one{
+    border-top: 1px solid #ff6700;
+}
+.color-two{
+    border-top: 1px solid #83c44e;
+}
+.color-three{
+    border-top: 1px solid #2196f3;
+}
+.color-fore{
+    border-top: 1px solid #e53935;
+}
+.color-five{
+    border-top: 1px solid #00c0a5;
+}
+.pro-img-box{
+    display: block;
+    text-align: center;
+}
+.pro-img{
+    width: 160px;
+    height: 160px;
+}
+.pro-title{
+    display: block;
+    height: 21px;
+    line-height: 21px;
+    text-align: center;
+    color: #212121;
+    font-size: 14px;
+    margin-top:22px;
+}
+.pro-dest{
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    font-size: 12px;
+    color: #b0b0b0;
+}
+.pro-price{
+    color: #ff6700;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 12px;
 }
 /*明星单品结束*/
+
+/*家电开始*/
+.content-box{
+    background: #f5f5f5;
+    padding-top: 60px;
+}
+.homeelec-box{
+    position: relative;
+}
+.tab-btns{
+    color: #424242;
+    font-size: 16px;
+    position: absolute;
+    right: 0;
+    top: 17px;
+}
+.tab-btns li{
+    float: left;
+    margin-left: 30px;
+    cursor: pointer;
+}
+.active{
+    width: 32px;
+    height: 24px;
+}
+.active-two{
+    width: 64px;
+    height: 24px;
+}
+.tab-btns .active:hover,.tab-btns .active-two:hover{
+    color: #ff6700;
+    border-bottom: 2px solid #ff6670;
+}
+.box-bd{
+    overflow: hidden;
+}
+.box-left{
+    float: left;
+}
+.box-right{
+    float: right;
+    width: 992px;
+}
+.bd-item{
+    position: relative;
+    width: 234px;
+    height: 246px;
+    padding: 34px 0 20px;
+    background: #fff;
+    margin: 0 0 14px 14px;
+    float: left;
+}
+.bd-img-box{
+    display: block;
+    text-align: center;
+    margin-bottom: 18px;
+}
+.bd-img{
+    width: 150px;
+    height: 150px;
+}
+.bd-title{
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+}
+.bd-dest{
+    height: 18px;
+    font-size: 12px;
+    text-align: center;
+    color: #b0b0b0;
+    margin-bottom: 10px;
+}
+.bd-price{
+    text-align: center;
+    color: #ff6700;
+    font-size: 14px;
+}
+.bd-new{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -32px;
+    display: block;
+    width: 64px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    background: #83c44e;
+    font-size: 12px;
+    color: #fff;
+}
+.bd-item-small{
+    background: #0f0;
+    position: relative;
+    width: 234px;
+    height: 246px;
+    padding: 34px 0 20px;
+    margin: 0 0 14px 14px;
+    float: left;
+}
+.bd-item-one{
+    position: absolute;
+    top: 0;
+    width: 234px;
+    height: 143px;
+    background: #fff;
+}
+.item-small{
+    position: relative;
+    width: 184px;
+    height: 83px;
+    margin: 30px 20px 30px 30px;
+}
+.bd-title-small{
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    padding-top:8px;
+    margin-bottom: 12px;
+}
+.bd-price-small{
+    color: #ff6700;
+    font-size: 14px;
+}
+.bd-img-small{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.bd-item-two{
+    position: absolute;
+    bottom: 0;
+    width: 234px;
+    height: 143px;
+    background: #fff;
+}
+/*家电结束*/
