@@ -1,3 +1,6 @@
+body{
+    height: 2000px;
+}
 /*轮播图开始*/
 .slide-box{
     position: relative;
@@ -152,9 +155,11 @@
 }
 /*轮播图结束*/
 
-/*home-sub开始*/
+/*频道列表开始*/
 .home-sub{
     margin-top: 14px;
+    margin-bottom: 26px;
+    overflow: hidden;
 }
 .span4{
     position: relative;
@@ -218,7 +223,22 @@
     margin-left: 15px;
 }
 .first img:hover{
-    box-shadow: 2px 12px 24px rgba(0,0,0,0.18) ;
+    box-shadow: 0px 10px 15px 6px rgba(0,0,0,0.1) ;
     /*border-radius: 8px;*/
 }
-/*home-sub结束*/
+/*频道列表结束*/
+
+/*明星单品开始*/
+.star-box{
+    height: 58px;
+}
+.star-title{
+    font-size: 22px;
+    font-weight: 200;
+    line-height: 58px;
+    background: #0f0;
+}
+.more-box{
+    float: left;
+}
+/*明星单品结束*/
