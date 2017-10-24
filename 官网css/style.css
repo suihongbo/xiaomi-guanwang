@@ -72,7 +72,7 @@ a{
 }
 .cart:hover .cart-box{
     display: block;
-    animation:show 0.5s ease-out forwards ;
+    animation:show 0.5s ease-in forwards ;
 }
 @keyframes show {
     100%{
