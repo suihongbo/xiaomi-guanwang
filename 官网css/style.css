@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
 }
-ul, ol{
+ul, ol, dl{
     list-style: none;
 }
 a{
