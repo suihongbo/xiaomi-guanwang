@@ -758,7 +758,8 @@
 
 /*内容开始*/
 .contents-list{
-    overflow: hidden;
+    width: 1246px;
+    height: 452px;
 }
 .contents-item:hover{
     box-shadow: 0px 10px 15px 6px rgba(0,0,0,0.1) ;
@@ -792,13 +793,11 @@
     text-align: center;
 }
 .contents-item-one{
-    position: absolute;
     color: #ffac13;
     margin-left: 0;
     border-top: 1px solid #ffac13;
 }
 .contents-item-two{
-    margin-left: 310px;
     color: #83c44e;
     border-top: 1px solid #83c44e;
 }
@@ -811,8 +810,17 @@
     border-top: 1px solid #2196f3;
 }
 .contents-box{
-    width: 296px;
     height: 340px;
+}
+.con-carousol{
+    overflow: hidden;
+}
+.carousol-box{
+    width: 888px;
+    overflow: hidden;
+}
+.con-carousol-item{
+    float: left;
 }
 .contents-box-name{
     display: block;
@@ -861,6 +869,7 @@
 }
 .dot{
     display: block;
+    text-indent: -9999em;
     width: 6px;
     height: 6px;
     border-radius: 6px;
