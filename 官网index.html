@@ -2685,28 +2685,28 @@
                                        <a href="#" class="contents-box-figure"><img src="官网img/nrone5e5da924-84e3-4959-9e25-5891cdf30757.png" alt=""></a>
                                    </li>
                                    <li class="con-carousol-item">
-                                       <a href="#" class="contents-box-name">哈利·波特与被诅咒的孩子</a>
+                                       <a href="#" class="contents-box-name">哈利·波特</a>
                                        <a href="#" class="contents-box-desc">“哈利·波特”第八个故事中文版震撼来袭！特别彩排版剧本！</a>
                                        <a href="#" class="contents-box-price">29.37元</a>
-                                       <a href="#" class="contents-box-figure"><img src="官网img/nrone5e5da924-84e3-4959-9e25-5891cdf30757.png" alt=""></a>
+                                       <a href="#" class="contents-box-figure"><img src="官网img/nronetwo61e1385e-54de-48f3-8717-5e4f4b1cdd14.png" alt=""></a>
                                    </li>
                                    <li class="con-carousol-item">
-                                       <a href="#" class="contents-box-name">哈利·波特与被诅咒的孩子</a>
+                                       <a href="#" class="contents-box-name">被诅咒的孩子</a>
                                        <a href="#" class="contents-box-desc">“哈利·波特”第八个故事中文版震撼来袭！特别彩排版剧本！</a>
                                        <a href="#" class="contents-box-price">29.37元</a>
-                                       <a href="#" class="contents-box-figure"><img src="官网img/nrone5e5da924-84e3-4959-9e25-5891cdf30757.png" alt=""></a>
+                                       <a href="#" class="contents-box-figure"><img src="官网img/nronethreemore-duokan.jpg" alt=""></a>
                                    </li>
                                </ul>
                            </div>
                            <div class="contents-controls">
-                               <i class="iconfont icon-back contents-icon-back"></i>
-                               <i class="iconfont icon-more contents-icon-more"></i>
+                               <i class="iconfont icon-back contents-icon-back" id="contents-icon-back-one"></i>
+                               <i class="iconfont icon-more contents-icon-more" id="contents-icon-more-one"></i>
                            </div>
                            <div class="pagers">
                                <ul>
-                                   <li class="pager"><span class="dot">1</span></li>
-                                   <li class="pager"><span class="dot dot-others">2</span></li>
-                                   <li class="pager"><span class="dot dot-others">3</span></li>
+                                   <li class="pager pager-one"><span class="dot dot-one">1</span></li>
+                                   <li class="pager pager-one"><span class="dot dot-one dot-others">2</span></li>
+                                   <li class="pager pager-one"><span class="dot dot-one dot-others">3</span></li>
                                </ul>
                            </div>
                        </div>
@@ -2926,6 +2926,7 @@
        </div>
    </div>
 
+   <script src="jslib.js"></script>
 <script>
 //购物车开始
     var oSearchClick = document.getElementById('search-click');
@@ -2961,7 +2962,7 @@
 
     for(var i=0; i<aImgBoxLi.length ;i++){
            aImgBoxLi[i].index = i ;
-           aImgBoxLi[i].onmouseover = function () {
+           aImgBoxLi[i].onclick = function () {
                changeImg(this.index);
                iNow=this.index;
            }
@@ -3078,7 +3079,7 @@
         }
 //明星单品 为你推荐 结束
 
-//家电选项卡 开始
+//家电选项卡 开始（家电模块后面都一样，暂时只加了家电一个模块）
     var oHomeList = document.getElementById('home-list');
     var aHomeListLi = oHomeList.getElementsByTagName('li');
     var oHomeTv = document.getElementById('home-tv');
@@ -3097,6 +3098,54 @@
 
 //家电选项卡 结束
 
+//内容轮播图开始（只有最左侧第一个加了，开始jQuery| go ahead! /*teacher is the most beautiful*/）
+    var oContentsBackOne =document.getElementById('contents-icon-back-one');
+    var oContentsMoreOne =document.getElementById('contents-icon-more-one');
+    var oCarousolBox = document.getElementsByClassName('carousol-box')[0];
+    var aPager = document.getElementsByClassName('pager-one');
+    var aDotOne = document.getElementsByClassName('dot-one');
+    var numOne = 0;
+
+    for(var i=0 ;i<aPager.length ;i++){
+        aDotOne[i].index = i ;
+        aDotOne[i].onclick = function () {
+            numOne = this.index;
+            runContents(this.index);
+        }
+    }
+    function runContents(inumOne) {
+        for(var j=0 ; j<aPager.length ;j++){
+            aDotOne[j].className = 'dot dot-one dot-others';
+        }
+        aDotOne[inumOne].className = 'dot dot-one';
+        animate(oCarousolBox,{left:-inumOne * 296});
+    }
+
+    oContentsMoreOne.onclick = function () {
+        numOne++;
+        if(numOne <=2 ){
+            animate(oCarousolBox,{left:-numOne * 296});
+        }
+        if(numOne >=2 ){
+            numOne =2;
+        }
+        runContents(numOne);
+    }
+    oContentsBackOne.onclick = function () {
+        numOne--;
+        if(numOne >= 0){
+            animate(oCarousolBox,{left:-numOne * 296});
+        }
+        if(numOne <= 0){
+            numOne = 0;
+        }
+        runContents(numOne);
+    }
+
+
+
+
+//内容轮播图结束
 
 
 

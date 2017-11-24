@@ -343,7 +343,7 @@
 /*home-main*/
 .home-main{
     background: #f5f5f5;
-    height: 5248px;
+    height: 5310px;
 }
 /*home-main*/
 
@@ -853,11 +853,17 @@
     height: 340px;
 }
 .con-carousol{
+    height: 262.8px;
+    position: relative;
     overflow: hidden;
 }
 .carousol-box{
     width: 888px;
-    overflow: hidden;
+    /*height: 262.8px;*/
+    /*overflow: hidden;*/
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 .con-carousol-item{
     float: left;
