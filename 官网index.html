@@ -3011,22 +3011,23 @@
     var oProGroup = document.getElementsByClassName('pro-group')[0];
     var oXmRecommendUl = document.getElementById('xm-recommend-ul');
     var timerOne;
-    var flag = true;
+    var flagOne = true, flagTwo = true, flagThree = true, flagFore = true;
 
-    for(var i=0 ;i<aIconStarMore.length ;i++){
+
+for(var i=0 ;i<aIconStarMore.length ;i++){
             aIconStarMore[i].index = i;
             aIconStarMore[i].onclick = function () {
                 this.className = 'iconfont icon-more icon-star icon-star-one';
                 aIconStarBack[this.index].className = 'iconfont icon-back icon-star icon-star-one icon-star-active';
 
-                if(oProGroup.offsetLeft > -1240 && flag){
+                if(oProGroup.offsetLeft > -1240 && flagOne){
 
                     timerOne = setInterval(function () {
-                        flag = false;
+                        flagOne = false;
                         oProGroup.style.left = oProGroup.offsetLeft - 40 + 'px';
                         if(oProGroup.offsetLeft <= -1240){
                             clearInterval(timerOne);
-                            flag = true;
+                            flagOne = true;
                         }
                     },10)
                 }
@@ -3037,11 +3038,13 @@
             aIconStarBack[i].onclick = function () {
                 this.className = 'iconfont icon-back icon-star icon-star-one';
                 aIconStarMore[this.index].className = 'iconfont icon-more icon-star icon-star-one icon-star-active';
-                if(oProGroup.offsetLeft < 0){
+                if(oProGroup.offsetLeft < 0 && flagTwo){
                     var timerTwo = setInterval(function () {
+                        flagTwo = false;
                         oProGroup.style.left = oProGroup.offsetLeft + 40 + 'px';
                         if(oProGroup.offsetLeft >= 0){
                             clearInterval(timerTwo);
+                            flagTwo = true;
                         }
                     },10)
                 }
@@ -3052,11 +3055,13 @@
             aIconStarMoreAther[i].onclick = function () {
                 this.className = 'iconfont icon-more icon-star icon-two';
                 aIconStarBackAther[this.index].className = 'iconfont icon-back icon-star icon-two icon-star-active';
-                if(oXmRecommendUl.offsetLeft > -1240){
+                if(oXmRecommendUl.offsetLeft > -1240 && flagThree){
                     var timerOne = setInterval(function () {
+                        flagThree = false;
                         oXmRecommendUl.style.left = oXmRecommendUl.offsetLeft - 40 + 'px';
                         if(oXmRecommendUl.offsetLeft <= -1240){
                             clearInterval(timerOne);
+                            flagThree = true;
                         }
                     },10)
                 }
@@ -3067,11 +3072,13 @@
             aIconStarBackAther[i].onclick = function () {
                 this.className = 'iconfont icon-back icon-star icon-two';
                 aIconStarMoreAther[this.index].className = 'iconfont icon-more icon-star icon-two icon-star-active';
-                if(oXmRecommendUl.offsetLeft < 0){
+                if(oXmRecommendUl.offsetLeft < 0 && flagFore){
                     var timerTwo = setInterval(function () {
+                        flagFore = false;
                         oXmRecommendUl.style.left = oXmRecommendUl.offsetLeft + 40 + 'px';
                         if(oXmRecommendUl.offsetLeft >= 0){
                             clearInterval(timerTwo);
+                            flagFore = true;
                         }
                     },10)
                 }
