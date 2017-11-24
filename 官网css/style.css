@@ -198,6 +198,29 @@ a{
     margin-top:20px;
     position:relative;
 }
+#search-box{
+    display: none;
+    position: absolute;
+    top: 50px;
+    width: 242px;
+    border: 1px solid #ff6700;
+    border-top: 0;
+    background: #fff;
+    z-index: 10;
+}
+#search-box a{
+    display: block;
+    position: relative;
+    padding: 6px 15px;
+    font-size: 12px;
+    color: #424242;
+}
+#search-box a span{
+    position: absolute;
+    right: 15px;
+    top: 6px;
+    color: #b0b0b0;
+}
 .search-txt{
     width: 222px;
     height: 48px;

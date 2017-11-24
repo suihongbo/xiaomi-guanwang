@@ -6,12 +6,16 @@
     position:relative;
     height: 460px;
 }
-.img-box img{
+#img-box img{
+    display: none;
     position: absolute;
     width: 1226px;
     height: 460px;
     left: 0;
     top: 0;
+}
+#img-box .img-box-active{
+    display: block;
 }
 .prev-btn,.next-btn{
     top: 50%;
@@ -36,7 +40,7 @@
     background: rgba(3,3,3,0.5);
     cursor: pointer;
 }
-.btns li{
+#btns li{
     width: 6px;
     height: 6px;
     background: #232429;
@@ -45,12 +49,16 @@
     margin-right: 10px;
     border-radius: 50%;
 }
-.btns li:hover{
+#btns li:hover{
     background: #898a8e;
     border:2px solid #4f4e56;
     cursor: pointer;
 }
-.btns{
+#btns .btns-active{
+    background: #898a8e;
+    border:2px solid #4f4e56;
+}
+#btns{
     position: absolute;
     width: 150px;
     height: 17.6px;
@@ -235,12 +243,14 @@
     height: 58px;
     line-height: 58px;
     color: #333;
-    margin-bottom:-10px;
 }
 .more-box{
     position: absolute;
     top: 20px;
     right: 0;
+}
+.more-box .icon-more{
+    border-left: 0;
 }
 .icon-star{
     padding: 2px 8px;
@@ -250,19 +260,22 @@
     float: left;
     cursor: pointer;
 }
-.icon-star-more{
-    border-left: 0;
+.icon-star-active{
     color: #000;
 }
-.icon-star-more:hover{
+.icon-star-active:hover{
     color: #ff6700;
 }
 .pro-list{
     height: 340px;
     overflow: hidden;
     margin-bottom: 40px;
+    position: relative;
 }
 .pro-group{
+    position: absolute;
+    left: 0;
+    top: 0;
     height: 340px;
     width: 2480px;
 }
@@ -359,13 +372,17 @@
     cursor: pointer;
 }
 .active{
-    width: 32px;
+    /*width: 32px;*/
     height: 24px;
 }
-.active-two{
-    width: 64px;
-    height: 24px;
+.active-active{
+    color: #ff6700;
+    border-bottom: 2px solid #ff6670;
 }
+/*.active-two{*/
+    /*width: 64px;*/
+    /*height: 24px;*/
+/*}*/
 .active-five{
     width: 80px;
     height: 24px;
@@ -374,13 +391,13 @@
     width: 48px;
     height: 24px;
 }
-.tab-btns .active:hover,.tab-btns .active-two:hover,.tab-btns .active-five:hover,.tab-btns .active-three:hover{
-    color: #ff6700;
-    border-bottom: 2px solid #ff6670;
-}
+/*.tab-btns .active:hover,.tab-btns .active-two:hover,.tab-btns .active-five:hover,.tab-btns .active-three:hover{*/
+    /*color: #ff6700;*/
+    /*border-bottom: 2px solid #ff6670;*/
+/*}*/
 .box-brick{
     position: absolute;
-    top: 372.6px;
+    top: 381.6px;
 }
 .brick-item{
     float: left;
@@ -397,6 +414,11 @@
     width: 1226px;
     padding-right:20px;
     padding-top: 10px;
+    margin: 0 auto;
+}
+.wrapper-two{
+    width: 1226px;
+    padding: 0px 4px 0 10px;
     margin: 0 auto;
 }
 .box-left{
@@ -429,6 +451,15 @@
 .box-right{
     float: right;
     width: 992px;
+    height: 628px;
+}
+.box-right ul{
+    width: 992px;
+    height: 628px;
+    display: none;
+}
+.box-right .home-tv-active{
+    display: block;
 }
 .bd-item{
     position: relative;
@@ -650,8 +681,17 @@
         transform:translate(0px,-2px);
     }
 }
-.xm-recommend .xm-item-five{
-    margin-right:0;
+.xm-recommend{
+    overflow: hidden;
+    position: relative;
+    height: 314px;
+}
+#xm-recommend-ul{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 314px;
+    width: 2480px;
 }
 .xm-pro{
     padding: 40px 0 15px 0;
