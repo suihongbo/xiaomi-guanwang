@@ -1204,7 +1204,7 @@
 .header-logo-last{
     width: 57px;
     height: 57px;
-    background: url("../官网img/mi-logo.png") center center no-repeat #ff6700;
+    background: url("../img/mi-logo.png") center center no-repeat #ff6700;
     float: left;
     margin-right: 10px;
 }
@@ -1224,7 +1224,7 @@
     width: 267px;
     height: 19px;
     margin: 30px auto 0;
-    background: url("../官网img/slogan2016.png") no-repeat center 0;
+    background: url("../img/slogan2016.png") no-repeat center 0;
 }
 /*site-info结束*/
 

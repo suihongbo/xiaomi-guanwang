@@ -19,7 +19,7 @@ a{
 /*banner开始*/
 .banner{
     height: 120px;
-    background: url("../官网img/cms_1507906806588_Fxrqj (1).jpg")no-repeat 50% 50%;
+    background: url("../img/cms_1507906806588_Fxrqj (1).jpg")no-repeat 50% 50%;
 }
 .banner a{
     display: block;
@@ -102,7 +102,7 @@ a{
     width: 55px;
     height: 55px;
     margin-top: 22px;
-    background: url("../官网img/mi-logo.png") center center no-repeat #ff6700;
+    background: url("../img/mi-logo.png") center center no-repeat #ff6700;
     float: left;
 }
 .header-menu{
