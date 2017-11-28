@@ -950,6 +950,7 @@
     margin-top: -20px;
 }
 .contents-icon-back{
+    cursor: pointer;
     position: absolute;
     left: 0;
     top: 50%;
