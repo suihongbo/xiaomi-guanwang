@@ -19,6 +19,18 @@ a{
 /*css reset结束*/
 
 /*公共样式*/
+#go-top{
+    width: 35px;
+    height: 74px;
+    background: url("../img/go-top.jpeg") -22px 0 no-repeat;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 999;
+}
+#go-top:hover{
+    background: url("../img/go-top.jpeg") -113px 1px no-repeat;
+}
 /*banner开始*/
 .banner{
     height: 120px;
@@ -97,6 +109,26 @@ a{
 }
 /*nav结束*/
 /*header开始*/
+.myshop{
+    position: relative;
+    float: left;
+    width: 185px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    color: #2196f3;
+    font-size: 32px;
+    cursor: pointer;
+}
+.myshop span{
+    position: absolute;
+    left: 45px;
+    top: 35px;
+    font-size:5px;
+}
+.myshop #myshop-span{
+    color: #ff6700;
+}
 .header{
     height: 100px;
     position: relative;
@@ -110,7 +142,7 @@ a{
 }
 .header-menu{
     float: left;
-    margin-left: 185px;
+    /*margin-left: 185px;*/
     height: 100px;
     line-height: 100px;
 }

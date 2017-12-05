@@ -1,6 +1,38 @@
 /**
  * Created by mac on 2017/11/28.
  */
+//返回顶部
+var oBtn = document.getElementById('go-top');
+oBtn.onclick = function(){
+    oBtn.style.background = 'url("img/go-top.jpeg") -200px 3px no-repeat';
+    var iScrollTop = document.documentElement.scrollTop ||  document.body.scrollTop;
+    var timer = setInterval(function(){
+        window.scrollTo(0,iScrollTop*=0.6);
+        if(iScrollTop <= 1){
+            clearInterval(timer);
+            oBtn.style.background = 'url("img/go-top.jpeg") -22px 0 no-repeat';
+            oBtn.onmouseover = function () {
+                oBtn.style.background = 'url("img/go-top.jpeg") -113px 1px no-repeat';
+            }
+        }
+    },50);
+}
+//返回顶部结束
+//字体变色
+var oQingfeng = document.getElementsByClassName('myshop')[0];
+function changeColor(){
+    var color="yellow|#2196f3|hotpink|#f00|#0f0";
+    color=color.split("|");
+    oQingfeng.style.color=color[parseInt(Math.random() * color.length)];
+}
+var timerChangeColor = setInterval("changeColor()",150);
+oQingfeng.onmouseover = function () {
+    clearInterval(timerChangeColor);
+}
+oQingfeng.onmouseout = function () {
+    timerChangeColor = setInterval("changeColor()",150);
+}
+//字体变色结束
 //购物车开始
 var oSearchClick = document.getElementById('search-click');
 var oSearchBox = document.getElementById('search-box');
