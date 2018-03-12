@@ -57,7 +57,7 @@ function oSearch(dis1,dis2,col1,col2) {
 //购物车结束
 
 //轮播图 定时移动
-var oImgBox=document.getElementById('img-box')
+var oImgBox=document.getElementById('img-box');
 var aImgBoxActive=oImgBox.getElementsByTagName('img');
 var aImgBoxLi=oImgBox.getElementsByTagName('li');
 var oNextBtn=document.getElementsByClassName('next-btn')[0];
@@ -93,6 +93,7 @@ function changeImg(idx) {
     }
     aImgBoxActive[idx].className ='img-box-active';
     aImgBoxLi[idx].className ='btns-active';
+    changeOpacity(aImgBoxActive,idx-1,idx);
 }
 imgBoxRun();
 oImgBox.onmouseover = function () {
@@ -105,6 +106,37 @@ function imgBoxRun() {
     timer = setInterval( function () {
         oNextBtn.onclick();
     },2000)
+}
+function changeOpacity(arr,indexOne,indexTwo) {
+    if(indexOne == -1){
+        indexOne = 5;
+        indexTwo = 0;
+    }
+    for(var i=0; i<arr.length ;i++){
+        arr[i].style.display = 'none';
+        arr[i].style.opacity = 0;
+    }
+    arr[indexOne].style.display = 'block';
+    arr[indexOne].style.opacity = 1;
+    arr[indexTwo].style.display = 'block';
+    arr[indexTwo].style.opacity = 0;
+    var timerOpacityOne = window.setInterval(function () {
+        if(arr[indexOne].style.opacity >= 0.01){
+            arr[indexOne].style.opacity *= 0.8;
+        }else{
+            arr[indexOne].style.display = 'none';
+            window.clearInterval(timerOpacityOne);
+        }
+    },40);
+    var opacity = 0.2;
+    var timerOpacityTwo = window.setInterval(function () {
+        if(arr[indexTwo].style.opacity <= 1){
+            opacity *= 1.2;
+            arr[indexTwo].style.opacity = opacity;
+        }else{
+            window.clearInterval(timerOpacityTwo);
+        }
+    },40)
 }
 //轮播图结束
 
