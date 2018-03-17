@@ -1,13 +1,13 @@
 function animate(elem, attr, callback){
 	clearInterval(elem.timer);
 	elem.timer = setInterval(function(){
-		var bStop = true;//一个标识位， true代表可以停止定时器，false代表不可不停止
+		var bStop = true;//一个标识位，   true代表可以停止定时器，false代表不可不停止
 		for(var prop in attr){//1:width
 			var curr = parseInt(getStyle(elem, prop));
 			if(prop == 'opacity'){
 				curr = parseInt(getStyle(elem, prop)*100);
 			}
-			var speed = (attr[prop] -  curr) / 8;
+			var speed = (attr[prop] -  curr) / 8 ;
 			speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
 
 			if(curr != attr[prop]){
