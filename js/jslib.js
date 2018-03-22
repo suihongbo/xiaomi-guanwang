@@ -7,7 +7,7 @@ function animate(elem, attr, callback){
 			if(prop == 'opacity'){
 				curr = parseInt(getStyle(elem, prop)*100);
 			}
-			var speed = (attr[prop] -  curr) / 8;
+			var speed = (attr[prop] -  curr) /8;
 			speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
 
 			if(curr != attr[prop]){
