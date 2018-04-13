@@ -2,7 +2,7 @@ function animate(elem, attr, callback){
 	clearInterval(elem.timer);
 	elem.timer = setInterval(function(){
 		var bStop = true;//一个标识位，   true代表可以停止定时器，false代表不可不停止
-		for(var prop in attr){		//1:width
+		for(var prop in attr){			//1:width
 			var curr = parseInt(getStyle(elem, prop));
 			if(prop == 'opacity'){
 				curr = parseInt(getStyle(elem, prop)*100);
