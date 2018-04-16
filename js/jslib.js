@@ -9,7 +9,6 @@ function animate(elem, attr, callback){
 			}
 			var speed = (attr[prop] -  curr) /8;
 			speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
-
 			if(curr != attr[prop]){
 				bStop = false;
 			}
